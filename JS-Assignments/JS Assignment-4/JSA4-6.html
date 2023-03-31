@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h3>Assignment 4</h3>
+    <script>
+
+      function reverseWords(str) {
+        const words = str.split(" ");
+        const reversedWords = words.reverse();
+        const reversedStr = reversedWords.join(" ");
+        return reversedStr;
+      }
+
+      const sentence = "duby zuby";
+      console.log(reverseWords(sentence));
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h3>Assignment 2</h3>
+    <script>
+
+	//start and end years
+	let startYear = 2014;
+	let endYear = 2050;
+
+	for (let year = startYear; year <= endYear; year++) {
+  	let jan1 = new Date(year, 0, 1); //new Date object for the 1st of Jan
+
+  	//day of the week is Sunday (0 = Sunday, 1 = Monday, etc.)
+  	if (jan1.getDay() === 0) {
+    		console.log("1st January "+year+" is a Sunday.");
+  		}
+	}
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h4>MATH</h4>
+    <script>
+    
+    function isPrime(x) {
+    if (x < 2) {
+    return false;
+  }
+
+  for (let i = 2; i < x; i++) {
+    if (x % i === 0) {
+      return false;
+    }
+  }
+
+return true;
+}
+alert(isPrime(5)); // true
+console.log(isPrime(10));  //false
+alert(isPrime(13)); //true
+console.log(isPrime(15)); //false
+
+</script>
+
+    </script>
+  </body>
+</html>

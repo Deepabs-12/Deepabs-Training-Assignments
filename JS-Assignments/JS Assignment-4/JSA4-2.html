@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h3>Assignment 4</h3>
+    <script>
+
+        const icecreams = [
+            { name: 'Vanilla', calories: 300 },
+            { name: 'Pista', calories: 450 },
+            { name: 'Chocolate', calories: 420 },
+            { name: 'Blueberry', calories: 350 },
+        ];
+
+        function sortByProperty(arr, prop) {
+            return arr.sort((a, b) => a[prop] - b[prop]);
+        }
+
+        console.log(sortByProperty(icecreams, 'calories'));
+
+        [
+            { name: 'Vanilla', calories: 300 },
+            { name: 'Chcolate', calories: 420 },
+            { name: 'Blueberry', calories: 350 },
+            { name: 'Pista', calories: 450 }
+        ]
+
+
+    </script>
+  </body>
+</html>

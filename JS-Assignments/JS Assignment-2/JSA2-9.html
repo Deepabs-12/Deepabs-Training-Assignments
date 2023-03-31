@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h3>Assignment 2</h3>
+    <script>
+
+	//today's date
+	let today = new Date();
+
+	//year of the next Christmas
+	let nextChristmasYear = today.getFullYear();
+
+	if (today.getMonth() === 11 && today.getDate() > 25) {
+  	//If it's already past Christmas this year, get the year of the next 	Christmas
+	nextChristmasYear++;
+	}
+
+	//Date object for the next Christmas
+	let nextChristmas = new Date(nextChristmasYear,11,25);
+
+	//difference in milliseconds between today and the next Christmas
+	let timeDiff = nextChristmas.getTime() - today.getTime();
+
+	//convert the time difference from milliseconds to days
+	let daysLeft = Math.ceil(timeDiff/(1000*3600*24));
+
+	//number of days left until the next Christmas
+	console.log("There are "+daysLeft+" days left until Christmas.");
+
+    </script>
+  </body>
+</html>

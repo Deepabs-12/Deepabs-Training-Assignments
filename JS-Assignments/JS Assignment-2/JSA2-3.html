@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h3>Assignment 1</h3>
+    <script>
+	//date object
+	let today = new Date();
+
+	//day,month and year from the date object
+	let dd = today.getDate();
+	let mm = today.getMonth() + 1;
+	let yyyy = today.getFullYear();
+
+	//date string in the desired formats
+	let formattedDate1 = mm + '-' + dd + '-' + yyyy;
+	let formattedDate2 = mm + '/' + dd + '/' + yyyy;
+	let formattedDate3 = dd + '-' + mm + '-' + yyyy;
+	let formattedDate4 = dd + '/' + mm + '/' + yyyy;
+
+	//formatted date strings
+	alert("Formatted date 1: " + formattedDate1);
+	alert("Formatted date 2: " + formattedDate2);
+	console.log("Formatted date 3: " + formattedDate3);
+	console.log("Formatted date 4: " + formattedDate4);
+
+    </script>
+  </body>
+</html>

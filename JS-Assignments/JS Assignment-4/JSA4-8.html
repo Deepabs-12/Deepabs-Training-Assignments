@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h3>Assignment 4</h3>
+    <script>
+
+      function missNum(arr) {
+      const n = arr.length;
+        let sum = 0;
+        let expectedSum = (n + 1) * (n + 2) / 2;
+
+        for (let i = 0; i < n; i++) {
+          sum += arr[i];
+        }
+
+      return expectedSum - sum;
+      }
+
+      const numbers = [1, 2, 3, 4, 6, 7, 8, 9, 10];
+      console.log(missNum(numbers));
+
+    </script>
+  </body>
+</html>

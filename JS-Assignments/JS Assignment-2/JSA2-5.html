@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h3>Assignment 2</h3>
+    <script>
+	
+	let i;
+
+	//string to be rotated
+	let str = "Koding && Learning";
+
+	//number of times to rotate the string
+	let rotations = 17;
+
+	for(i=0;i<rotations;i++) {
+  	
+	//last character of the string
+  	let lastChar = str.charAt(str.length - 1);
+
+  	//remove the last char from the string
+  	str = str.substring(0,str.length-1);
+
+  	//attaching the last character to the front of the string
+  	str = lastChar + str;
+
+  	//the rotated string
+  	console.log(str);
+	}
+
+    </script>
+  </body>
+</html>

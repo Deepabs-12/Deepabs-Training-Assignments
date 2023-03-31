@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h3>Assignment 2</h3>
+    <script>
+    
+    let now = new Date();
+
+    let week1 = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let week2 = week1[now.getDay()];
+
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+
+    let period = "AM";
+    if (hour >= 12) {
+      period = "PM";
+    }
+    if (hour > 12) {
+      hour -= 12;
+    }
+
+    let timeString = "Current time is : " + hour + " " + period + " : " + minute + " : " + second;
+
+    alert("Today is : " + week2 + ".");
+    console.log(timeString);
+
+
+    </script>
+  </body>
+</html>

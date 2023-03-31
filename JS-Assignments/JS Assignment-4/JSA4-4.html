@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h3>Assignment 4</h3>
+    <script>
+
+        function nthLargest(arr, n) {
+            if (n > arr.length) {
+                return null;
+            }
+            arr.sort((a, b) => b - a);
+            return arr[n - 1];
+        }
+
+        const numbers = [12, 56, 14, 21, 7, 29, 28];
+        console.log(nthLargest(numbers, 1)); 
+
+
+    </script>
+  </body>
+</html>

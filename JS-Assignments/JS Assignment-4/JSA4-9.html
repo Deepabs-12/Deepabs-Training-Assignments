@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Program</title>
+  </head>
+  <body>
+    <h3>Assignment 4</h3>
+    <script>
+
+      function nonRepeatingChar(str) {
+      const charCount = {};
+  
+      for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        if (charCount[char]) {
+          charCount[char]++;
+        } else {
+          charCount[char] = 1;
+        }
+      }
+  
+      for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+          if (charCount[char] === 1) {
+            return char;
+          }
+        }
+  
+      return null;
+    }
+
+    const sentence = "Ice cream is a frozen dessert!";
+    console.log(nonRepeatingChar(sentence));
+
+    </script>
+  </body>
+</html>
