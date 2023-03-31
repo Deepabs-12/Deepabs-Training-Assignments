@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Photography Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="A10.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Photography Portfolio</h1>
+    </div>
+  </header>
+
+  <section id="work">
+    <div class="container">
+      <h2>My Work</h2>
+      <div class="gallery">
+        <img src="C:\Users\basapde\OneDrive - Tecnotree\Pictures\1.jpg" alt="Image 1" width="225" hight="225">
+        <img src="C:\Users\basapde\OneDrive - Tecnotree\Pictures\2.jpg" alt="Image 2" width="225" hight="225">
+        <img src="C:\Users\basapde\OneDrive - Tecnotree\Pictures\4.jpg" alt="Image 4" width="225" hight="225">
+        <img src="C:\Users\basapde\OneDrive - Tecnotree\Pictures\5.jpg" alt="Image 5" width="225" hight="225">
+      </div><br><br>
+      <a href="#contact" class="button">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>For inquiries, please fill out the form below:</p>
+      <form action="#">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+
+        <button type="submit" id="sub">Send</button><br><br>
+      </form>
+    </div>
+  </section>
+  <script>
+    var send=document.getElementById("sub");
+    send.addEventListener("click",function(){
+        alert("Sent successfully")
+    });
+  </script>
+
+  <footer>
+    <div class="container">
+      <p>© 2023 Photography Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

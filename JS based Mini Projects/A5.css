@@ -1,0 +1,74 @@
+/* Apply some basic styles to the page */
+body {
+	font-family: Arial, sans-serif;
+    background-image: url('https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body h1 {
+    color: #0b1548;
+    margin-top: 5%;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+}
+
+label {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+input[type="text"] {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+button[type="submit"] {
+	background-color: #0b2841;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	margin-top: 10px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+button[type="submit"]:hover {
+	background-color: #3071a9;
+}
+
+/* Style the weather container */
+#weather-container {
+	margin-top: 30px;
+    margin-left: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image:url('https://img.freepik.com/free-vector/blue-sky-with-shiny-clouds-background_1017-23279.jpg?w=360');
+    color: #f1f2f4;
+	padding: 20px;
+	border-radius: 5px;
+    width: 18%;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the weather information */
+h2 {
+	margin-bottom: 10px;
+}
+
+p {
+	margin: 5px 0px;
+}

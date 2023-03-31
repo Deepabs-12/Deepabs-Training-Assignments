@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="A3.css">
+ 
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Personal Profilo</h1>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am Deepa.B.S from Mysore. I'm pursuing my engineering at MIT,Mysore. I'm very flexible and adapt to new sitaution and make the best out of them which is required. My commitment towards the work that is being assigned is my strength.</p>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Project Management System</li>
+        <li>Medicine Database Application </li>
+        
+      </ul>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>C programming</li>
+        <li>Java</li>
+        <li>Basics of HTML and CSS</li>
+      </ul>
+    </section>
+    <section id="resume">
+      <h2>Resume</h2>
+      <p><u>Deepa.pdf</u></p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea><br>
+        <div class="button-container">
+            
+        <input id="cancel" type="submit" value="Submit">
+        <input type="cancel" id="cancel" value="Cancel">
+        </div>
+      </form>
+    </section>
+  </main>
+  <script>
+  const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const name = document.querySelector('#name').value.trim();
+  const email = document.querySelector('#email').value.trim();
+  const message = document.querySelector('#message').value.trim();
+
+  if (name === '' || email === '' || message === '') {
+    alert('Please fill out all fields.');
+  } else {
+    // Send form data to server using AJAX or fetch API
+    // Display success message or error message based on server response
+    // Reset form
+    alert('Form submitted successfully!');
+    form.reset();
+  }
+});
+
+
+const cancelBtn = document.querySelector('#cancel');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const name = document.querySelector('#name').value.trim();
+  const email = document.querySelector('#email').value.trim();
+  const message = document.querySelector('#message').value.trim();
+
+  if (name === '' || email === '' || message === '') {
+    alert('Please fill out all fields.');
+  } else {
+    // Send form data to server using AJAX or fetch API
+    // Display success message or error message based on server response
+    // Reset form
+    alert('Form submitted successfully!');
+    form.reset();
+  }
+});
+
+cancelBtn.addEventListener('click', () => {
+  form.reset();
+});
+
+</script>
+
+  <footer>
+    <p>&copy; 2023 My Website</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:cadetblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  background-color:grey;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+header input {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  margin-right: 1em;
+}
+
+header button {
+  background-color: black;
+  color:white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+.course {
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 1em;
+  padding: 1em;
+  width: 30%;
+  margin-left: 100px;
+}
+
+.course h2 {
+  margin: 0;
+}
+
+.course p {
+  margin: 0.5em 0;
+}
+
+.enroll-btn, .cancel-btn {
+  background-color: #0d0e0d;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 0.5em;
+  color: cadetblue;
+}
+
+.cancel-btn {
+  background-color: grey;
+  color: black;
+}
+
+
+
+     

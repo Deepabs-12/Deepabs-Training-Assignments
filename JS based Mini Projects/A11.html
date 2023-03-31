@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Topic Content</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        background-color: #A0C3D2;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+      }
+
+      .menu {
+        width: 200px;
+        background-color: #BDCDD6;
+        padding: 20px;
+      }
+
+      .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu li {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #3F979B;
+        transition: background-color 0.3s ease;
+      }
+
+      .menu li:hover {
+        background-color:#B6EADA ;
+      }
+
+      .content {
+        flex: 1;
+        padding: 20px;
+        overflow-y: scroll;
+        text-align: center;
+      }
+
+      .content h2 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <ul>
+          <li id="html">HTML</li>
+          <li id="css">CSS</li>
+          <li id="js">JavaScript</li>
+        </ul>
+      </div>
+      
+      <div class="content">
+        <h1>Technical Documentation</h1><br></br>
+        <h2>Welcome to the Topic Content Page</h2>
+       
+        <p>Please click on a topic on the left to view its content.</p>
+      </div>
+    </div>
+    <script>
+      const menuItems = document.querySelectorAll('.menu li');
+      const contentDiv = document.querySelector('.content');
+
+      const topicContent = {
+        html: '<h2>HTML</h2><p>HTML is the standard markup language for creating web pages.HTML consists of a series of elements.HTML elements tell the browser how to display the content.HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</p>',
+        css: '<h2>CSS</h2><p>CSS is used to style web pages written in HTML and XHTML.CSS saves a lot of work. It can control the layout of multiple web pages all at once.External stylesheets are stored in CSS files.A CSS rule consists of a selector and a declaration block.The selector points to the HTML element you want to style.The declaration block contains one or more declarations separated by semicolons.Each declaration includes a CSS property name and a value, separated by a colon.Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>',
+        js: '<h2>JavaScript</h2><p>JavaScript is a programming language that makes web pages interactive.One of many JavaScript HTML methods is getElementById(). JavaScript and Java are completely different languages, both in concept and design.In HTML, JavaScript code is inserted between script tags. A JavaScript function is a block of JavaScript code, that can be executed when "called" for.You can place any number of scripts in an HTML document.Scripts can be placed in the <body>, or in the <head> section of an HTML page, or in both.</p>',
+      };
+
+      menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const topicId = item.id;
+          contentDiv.innerHTML = topicContent[topicId];
+        });
+      });
+    </script>
+  </body>
+</html>

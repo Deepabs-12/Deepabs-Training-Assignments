@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>E-commerce</title>
+</head>
+<body>
+    <script>
+    // Add to cart functionality
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', addToCartClicked);
+});
+
+function addToCartClicked(event) {
+  const button = event.target;
+  const product = button.parentElement;
+  const id = product.dataset.id;
+  const price = product.dataset.price;
+  addToCart(id, price);
+}
+
+function addToCart(id, price) {
+  const cartItem = document.createElement('div');
+  cartItem.classList.add('cart-item');
+  cartItem.dataset.id = id;
+
+  const itemPrice = parseFloat(price).toFixed(2);
+  const itemPriceFormatted = `$${itemPrice}`;
+
+  cartItem.innerText = `Gift ${id} - ${itemPriceFormatted}`;
+
+  const cartItems = document.querySelector('.cart-items');
+  cartItems.appendChild(cartItem);
+}
+
+</script>   
+</body>
+</html>
