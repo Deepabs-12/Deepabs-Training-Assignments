@@ -1,0 +1,72 @@
+body {
+	background-image: url('https://thumbs.dreamstime.com/b/assorted-indian-food-different-bowls-dark-wooden-background-top-view-dishes-appetizers-cuisine-chicken-curry-rice-129630877.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+	background-color: #f7bf830c;
+	color: #fff;
+	padding: 10px;
+	margin-bottom: 3%;
+}
+
+.container {
+	max-width: 900px;
+	margin: 5% auto;
+	padding: 20px;
+	background-color: #f1f1f1;
+    background-color: transparent;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	margin-bottom: 20px;
+    font-size: x-large;
+    color:rgb(240, 241, 241);
+    font-weight: 600;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+input[type="text"] {
+	padding: 10px;
+	width: 60%;
+	margin-right: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+button[type="submit"] {
+	padding: 10px 20px;
+	background-color: #12ba42ce;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#search-results {
+	margin-bottom: 20px;
+}
+
+h2 {
+	margin-top: 40px;
+    color:aliceblue;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin-bottom: 10px;
+}

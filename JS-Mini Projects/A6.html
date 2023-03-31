@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task List</title>
+	<style type="text/css">
+		body {
+			background-color: #f7f7f7;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0 0 20px;
+		}
+
+		form {
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			max-width: 500px;
+			padding: 20px;
+			text-align: left;
+		}
+
+		input[type="text"] {
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			padding: 10px;
+			width: 70%;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			border: none;
+			border-radius: 4px;
+			color: #fff;
+			cursor: pointer;
+			margin-left: 10px;
+			padding: 10px;
+			width: 20%;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 10px;
+			padding: 10px;
+		}
+
+		li.complete {
+			background-color: #d9d9d9;
+		}
+
+		li span {
+			flex-grow: 1;
+			margin-right: 10px;
+		}
+
+		li button {
+			background-color: #e60000;
+			border: none;
+			border-radius: 4px;
+			color: #fff;
+			cursor: pointer;
+			padding: 5px 10px;
+		}
+
+		li.complete button {
+			background-color: #a6a6a6;
+			cursor: not-allowed;
+		}
+	</style>
+</head>
+<body>
+	<h1>Task List</h1>
+	<form onsubmit="addTask(); return false;">
+		<input type="text" id="newTaskInput" placeholder="Enter a task..." required>
+		<input type="submit" value="Add">
+	</form>
+
+	<ul id="taskList"></ul>
+
+	<script type="text/javascript">
+		// Load saved tasks from local storage
+		var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+		// Render tasks on the page
+		renderTasks();
+
+		function addTask() {
+			var newTaskInput = document.getElementById("newTaskInput");
+			var newTask = {
+				title: newTaskInput.value,
+				completed: false
+			};
+
+			// Add new task to the tasks array
+			tasks.push(newTask);
+
+			// Save tasks to local storage
+			localStorage.setItem("tasks", JSON.stringify(tasks));
+
+			// Clear the input field
+			newTaskInput.value = "";
+
+			// Re-render tasks on the page
+			renderTasks();
+		}
+
+		function completeTask(index) {
+			// Mark the task
+	// Mark the task as completed
+    tasks[index].completed = true;
+
+// Save tasks to local storage
+localStorage.setItem("tasks", JSON.stringify(tasks));
+
+// Re-render tasks on the page
+renderTasks();
+}
+
+function deleteTask(index) {
+// Remove the task from the tasks array
+tasks.splice(index, 1);
+
+// Save tasks to local storage
+localStorage.setItem("tasks", JSON.stringify(tasks));
+
+// Re-render tasks on the page
+renderTasks();
+}
+
+function renderTasks() {
+var taskList = document.getElementById("taskList");
+taskList.innerHTML = "";
+
+// Loop through tasks and render each one
+for (var i = 0; i < tasks.length; i++) {
+    var task = tasks[i];
+    var listItem = document.createElement("li");
+    listItem.innerHTML = '<span>' + task.title + '</span>';
+
+    if (task.completed) {
+        listItem.className = "complete";
+        listItem.innerHTML += '<button disabled>Complete</button>';
+    } else {
+        listItem.innerHTML += '<button onclick="completeTask(' + i + ');">Complete</button>';
+    }
+
+    listItem.innerHTML += '<button onclick="deleteTask(' + i + ');">Delete</button>';
+    taskList.appendChild(listItem);
+}
+}
+</script>
+</body>
+</html>
