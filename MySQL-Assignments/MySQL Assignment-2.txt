@@ -1,0 +1,124 @@
+1.Select employees first name, last name, job_id and salary whose first
+name starts with alphabet S
+
+>select first_name, last_name, job_id, salary from employees where first_name LIKE 'S%';
+
+2. Write a query to select employee with the highest salary
+
+>select * from employees where salary = (select max(salary) FROM employees);
+
+3. Select employee with the second highest salary
+
+>select * from employees where salary = (select max(salary) from employees where salary < (select max(salary) from employees ));
+
+4. Fetch employees with 2nd or 3rd highest salary
+
+>select * from employees where salary = (select distinct salary from employees AS e1 where 2 = (select count(distinct salary) from employees AS e2 where e2.salary >= e1.salary ));
+
+5. Write a query to select employees and their corresponding managers
+and their salaries
+
+>select a.first_name as employee_name,a.salary as employee_salary,b.first_name as manager_name,b.salary as manager_salary from employees a left join employees b on a.employee_id = b.manager_id;
+
+6. Write a query to show count of employees under each manager in descending order
+
+>select manager_id, 
+count(*) AS employee_count
+from employees
+group by manager_id
+order by employee_count desc;
+
+7. Find the count of employees in each department
+
+>select department_name, count(*) AS employee_count
+from employees
+JOIN departments ON employees.department_id = departments.department_id
+group by department_name;
+
+
+8. Get the count of employees hired year wise
+
+>select year(hire_date) AS hire_year, count(*) AS employee_count
+from employees
+group by hire_year;
+
+
+9. Find the salary range of employees
+
+>select min(salary) AS min_salary, max(salary) AS max_salary
+from employees;
+
+
+10. Write a query to divide people into three groups based on their salaries
+
+>select case
+    when salary < 50000 then 'Group 1'
+    when salary < 100000 then 'Group 2'
+    else 'Group 3'
+  end AS salary_group, 
+  count(*) AS count_of_people
+from employees
+group by salary_group;
+
+
+11. Select the employees whose first_name contains “an”
+
+>select * from employees where first_name LIKE '%an%';
+
+
+12. Select employee first name and the corresponding phone number in the format (_ _ _)-(_ _ _)-(_ _ _ _)
+
+>select first_name, concat(left(phone_number, 3), '-', substring(phone_number, 4, 3), '-', right(phone_number, 4)) AS formatted_phone_number
+from employees;
+
+
+13. Find the employees who joined in August, 1994.
+
+>select * from employees 
+where hire_date between '1994-08-01' and '1994-08-31';
+
+
+ 14. Write an SQL query to display employees who earn more than the average salary in that company
+
+>select *from employees
+where salary > (select avg(salary) from employees);
+
+
+15. Find the maximum salary from each department.
+
+>select department_id, max(salary) as max_salary from employees
+group by department_id;
+
+
+16. Write a SQL query to display the 5 least earning employees
+
+>select *from employees
+order by salary ASC
+Limit 5;
+
+
+17. Find the employees hired in the 80s
+
+>select *from employees
+where hire_date between '1980-01-01' and '1989-12-31';
+
+
+18. Display the employees first name and the name in reverse order
+
+>select first_name, concat(substring_index(last_name, ' ', -1), ', ', substring_index(last_name, ' ', 1)) AS reversed_name
+from employees;
+
+
+19. Find the employees who joined the company after 15th of the month
+
+>select * from employees where day(hire_date) > 15;
+
+
+20. Display the managers and the reporting employees who work in different departments
+
+>select m.first_name AS manager_first_name, m.last_name AS manager_last_name,
+e.first_name AS employee_first_name, e.last_name AS employee_last_name
+from employees e
+JOIN employees m ON e.manager_id = m.employee_id
+where e.department_id <> m.department_id;
+

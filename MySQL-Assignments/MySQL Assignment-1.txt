@@ -1,0 +1,58 @@
+1. Write a MySQL command to create a new database called
+Hospital management.
+
+>CREATE DATABASE `Hospital management`;
+
+2. Write a MySQL command to create a new table called
+employees with three columns: id (integer, primary key),
+name (varchar), and age (integer).
+
+>CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    age INT
+);
+
+
+3. Write a MySQL command to insert a new record into the
+employees table with the following values: id=1,
+name='John Doe', age=30.
+
+>INSERT INTO employees (id, name, age)
+VALUES (1, 'John Doe', 30);
+
+4. Write a MySQL command to retrieve all the data from the
+employees table.
+
+>SELECT * FROM employees;
+
+5. Write a MySQL command to retrieve the names and ages of
+all the employees in the employees table.
+
+>SELECT name, age FROM employees;
+
+
+6. Write a MySQL command to update the age of the employee
+with id=1 to 35.
+
+>UPDATE employees
+SET age = 35
+WHERE id = 1;
+
+
+7. Write a MySQL command to delete the employee with id=1
+from the employees table.
+
+>DELETE FROM employees WHERE id = 1;
+
+
+8. Write a MySQL command to drop the employees table.
+
+>DROP TABLE employees;
+
+9. Write a MySQL command to drop the Hospital Management
+database.
+
+>DROP DATABASE `Hospital management`;
+
+
