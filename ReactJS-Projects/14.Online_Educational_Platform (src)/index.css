@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*.course {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.course p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.course button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.course button:hover {
+  background-color: #0062cc;
+}
+*/
+
+h1{
+  text-align: center;
+}
+
+input{
+  margin-left: 45%;
+}
+
+
+.course {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.course p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.course button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.course button:hover {
+  background-color: #0062cc;
+}
+
+.course:nth-child(odd) {
+  background-color: #f1f8ff;
+}
+
+.course:nth-child(even) {
+  background-color: #e1f5fe;
+}
+
+
+
