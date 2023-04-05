@@ -1,0 +1,83 @@
+/* Set default styles for body element */
+body {
+  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #D6E4E5;
+}
+
+/* Define styles for code blocks */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Define styles for documentation container */
+.documentation {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Define styles for topics navigation sidebar */
+.topics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center; 
+  margin-top: 0px;/* Align items to the top */
+
+  width: 150px;
+  background-color: #f5f5f5;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Define styles for navigation buttons */
+button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Define styles for active and hover states of navigation buttons */
+button:hover,
+button.active {
+  background-color:#8D9EFF;
+  color: #fff;
+}
+
+/* Define styles for description section */
+.description {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Define styles for heading 2 elements */
+h2 {
+  margin-bottom: 20px;
+  color:#8D9EFF;
+}
+
+/* Define styles for paragraphs */
+p {
+  line-height: 1.5;
+  color: #666;
+}
+
+h1{
+  text-align: center;
+  margin-left: 10%;
+  
+}
