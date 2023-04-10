@@ -1,2 +1,2 @@
-# Deepabs-Training-Assignments
+# deepabs-training-assignments
 Technical Training Assignments
