@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<script type="text/javascript">
+		function checkCredentials() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			var loginButton = document.getElementById("loginButton");
+			var errorText = document.getElementById("errorText");
+			var successText = document.getElementById("successText");
+
+			if (username === "" || password === "") {
+				loginButton.disabled = true;
+				errorText.innerText = "Please enter both username and password";
+				successText.innerText = "";
+			} else if (username === "admin" && password === "456") {
+				loginButton.disabled = false;
+				errorText.innerText = "";
+				successText.innerText = "Credentials are correct. Click login.";
+			} else {
+				loginButton.disabled = true;
+				errorText.innerText = "Incorrect username or password.";
+				successText.innerText = "";
+			}
+		}
+
+		function login() {
+			alert("Login successful!");
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>Login</h1>
+		<form>
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" required onkeyup="checkCredentials()">
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required onkeyup="checkCredentials()">
+			<button type="button" id="loginButton" disabled onclick="login()">Login</button>
+			<p id="errorText" class="error-text"></p>
+			<p id="successText" class="success-text"></p>
+		</form>
+		<div class="forgot-password">
+			<a href="forgot.html">Forgot Password?</a>
+		</div>
+	</div>
+</body>
+</html>
